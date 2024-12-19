@@ -1,51 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <title>Portofolio</title>
-        <link rel="stylesheet" href="css\style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
-        <header class="main-header">
-            <div class="home-icon"></div>
+<body>
+    <header class="main-header">
+        <div class="home-icon"></div>
 
-            <nav>
-                <a href="#home-section">Home</a>
-                <a href="#our-packages-section">Our Packages</a>
-                <a href="#">Call Us</a>
-            </nav>
+        <nav>
+            <a href="#home-section">Home</a>
+            <a href="#our-packages-section">Our Packages</a>
+            <a href="#contact-section">Call Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <header id="home-section" class="content-header">
+            <h1>~ Selamat Datang di Makan Enak ~</h1>
+            <h3>Semua makanan enak ada di sini 🍔🍟</h3>
+            <div id="username-display">Welcome, Guest!</div>
         </header>
-        
-        <hr/>
 
-        <main>
-            <header id="home-section" class="content-header">
-                <h1>~ Selamat Datang di Makan Enak ~</h1>
-                <h3>Semua makanan enak ada di sini</h3>
-            </header>
-
-            <section class="main-container">
+        <!-- Main Section -->
+        <section class="main-container" id="home-section">
+                <!-- Banner AutoSlide Content -->
                 <aside class="main-item">
                     <div class="banner-img"></div>
+                    <div class="banner-img banner-1"></div>
+                    <div class="banner-img banner-2"></div>
+                    <div class="banner-img banner-3"></div>
                 </aside>
 
-                <form class="main-item">
+            <form class="main-item" onsubmit="validateForm(event)">
+                <h3>Hubungi Kami 💌</h3>
+                
+                <input type="text" id="name" placeholder="Nama Anda" required>
+                <input type="email" id="email" placeholder="Email Anda" required>
+                
+                <select id="interest" required>
+                    <option value="" disabled selected>Apa yang Anda minati?</option>
+                    <option value="paket1">Paket 1 - Taco Fiesta</option>
+                    <option value="paket2">Paket 2 - Pizza Party</option>
+                    <option value="paket3">Paket 3 - Sushi Set</option>
+                    <option value="paket4">Paket 4 - Burger Delight</option>
+                    <option value="paket5">Paket 5 - Ramen Lover</option>
+                    <option value="paket6">Paket 6 - Sweet Treats</option>
+                </select>
+                
+                <button type="submit">Kirim ✉️</button>
+            </form>           
+        </section>
 
-                </form>
-            </section>
+        <section id="our-packages-section">
+            <header class="content-header our-packages-header">
+                <h1>Our Packages 🍽️</h1>
+                <p>Jelajahi berbagai pilihan makanan favorit Anda!</p>
+            </header>
+            <div class="packages-container">
+                <div class="package-card">
+                    <h3>🌮 Taco Fiesta</h3>
+                    <p>Nikmati kelezatan taco dengan berbagai saus pilihan.</p>
+                </div>
+                <div class="package-card">
+                    <h3>🍕 Pizza Party</h3>
+                    <p>Paket lengkap pizza dengan topping favorit Anda!</p>
+                </div>
+                <div class="package-card">
+                    <h3>🍣 Sushi Set</h3>
+                    <p>Paket sushi segar dengan variasi isi yang menggoda.</p>
+                </div>
+                <div class="package-card">
+                    <h3>🍔 Burger Delight</h3>
+                    <p>Paket burger dengan daging juicy dan roti lembut.</p>
+                </div>
+                <div class="package-card">
+                    <h3>🍜 Ramen Lover</h3>
+                    <p>Paket ramen panas dengan kuah khas Jepang.</p>
+                </div>
+                <div class="package-card">
+                    <h3>🍩 Sweet Treats</h3>
+                    <p>Paket donat manis dengan berbagai pilihan topping.</p>
+                </div>
+            </div>
+    </section>
 
-            <section id="our-packages-section">
-                <header class="content-header our-packages-header">
-                    <h1>Our Packages</h1>
-                </header>
-            </section>
-        </main>
+    <section class="cta-section">
+        <div class="container">
+            <h2>Why Choose Us? 💕</h2>
+            <p>Kami menawarkan makanan lezat, kualitas terbaik, dan pelayanan yang ramah. Pilihan terbaik untuk memuaskan selera Anda!</p>
+            <button class="cta-button">Pesan Sekarang 💌</button>
+        </div>
+    </section>
+    
+    </main>
 
-        <footer>
-            <span>Dibuat Oleh : timitati22@gmail.com</span>
-        </footer>
-    </body>
+    <!-- Footer -->
+    <footer id="contact-section">
+        <span>Dibuat Oleh: timitati22@gmail.com</span>
+    </footer>
+    <script src="js\script.js"></script>
+</body>
+
 </html>

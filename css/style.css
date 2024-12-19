@@ -1,25 +1,45 @@
 /* Ini css */
-.main-header{
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f9ff;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+h1, h3 {
+    color: #6a5acd;
+    margin-bottom: 10px;
+}
+
+/* Header Styling */
+.main-header {
+    background-color: #b3cde0;
+    padding: 20px 15px;
     display: flex;
     justify-content: space-between;
-}
-
-nav{
-    display: flex;
     align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-nav > a{
-    border: 1px solid;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
+.main-header nav a {
+    margin: 0 10px;
     text-decoration: none;
-    color: black;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.home-icon{
+.main-header nav a:hover {
+    background-color: #9370db;
+    color: #fff;
+}
+
+.home-icon {
     height: 50px;
     width: 50px;
     background-image: url(https://picsum.photos/200);
@@ -28,38 +48,212 @@ nav > a{
     border-radius: 50%;
 }
 
-.banner-img{
-    height: 320px;
-    background-image: url(https://picsum.photos/700);
-    background-size: cover;
-    background-position: center;
-}
 
-.content-header{
+
+/* Content Header */
+.content-header {
     text-align: center;
+    margin-top: 20px;
+    padding: 20px 0;
 }
 
-.main-container{
+hr {
+    border: none;
+    height: 2px;
+    background-color: #b3cde0;
+    margin: 20px 0;
+}
+
+/* Main Section */
+main {
+    margin-bottom: 20px;
+}
+
+
+.main-container {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 25px;
+    padding: 0 15px;
+    margin: 20px 0;
 }
 
-.main-item{
+.main-item {
     flex: 1;
 }
 
-form{
-    background-color:darkgray;
+.banner-img {
+    height: 320px;
+    background-image: url(https://picsum.photos/750);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.our-packages-header{
-    background-color: darkgray;
-    margin-top: 25px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+.banner-1 {
+    background-image: url(https://picsum.photos/700);
+}
+.banner-2 {
+    background-image: url(https://picsum.photos/710);
+}
+.banner-3 {
+    background-image: url(https://picsum.photos/720);
 }
 
-footer{
-    margin-top: 25px;
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h3 {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+form input,
+form select,
+form button {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #6a5acd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%236a5acd' d='M2 0L0 2h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #9370db;
+    outline: none;
+}
+
+form button {
+    background-color: #9370db;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #6a5acd;
+}
+
+
+/* Our Packages Section */
+.our-packages-header {
+    background-color: #9370db;
+    padding: 50px 0;
+    color: #fff;
+    border-radius: 15px;
+    margin-bottom: 20px;
     text-align: center;
 }
+
+.our-packages-header p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #f4f9ff;
+}
+
+.packages-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.package-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(33.333% - 10px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card h3 {
+    color: #6a5acd;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.package-card p {
+    font-size: 1rem;
+    color: #4a4a4a;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* CTA Section */
+.cta-section {
+    background: #9370db;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.cta-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: #6a5acd;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #483d8b;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #b3cde0;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
